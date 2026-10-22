@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Isometra&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Isometra&family=Oswald:wght@200..700&family=Pixelify+Sans:wght@400..700&display=swap');
     * { box-sizing: border-box; }
 
@@ -13,17 +14,23 @@
     
     }
 
-    .app {
-      width: 100%;
-      max-width: 450px;
-      min-height: 100vh;
-      background: #2c2c2c;
-    }
+
+ 
+.app {
+  width: 100%;
+  max-width: 450px;
+  min-height: 100vh;
+  background: #2c2c2c;
+  position: relative;
+  overflow: hidden;
+}
+    
 
     header {
       text-align: center;
       padding: 18px 10px;
       background: #1b4332;
+      align-items: center;
     }
     header h1 {
       margin: 0;
@@ -31,17 +38,26 @@
       color: #fcfcfc;
     }
 
-    .grid {
+    .sub{
+      margin:4px 0 0;
+      font-size: clamp(12px,3.5vw,16px);
+      letter-spacing: 8px;
+      color: #880202;
+      font-weight: bold;
+      font-family: "Archivo Black";
+    }
+
+    .grd {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: clamp(12px, 4vw, 20px);
       padding: clamp(16px, 6vw, 32px);
     }
 
-    .card {
+    .crd {
      
       background: #8e8f8e;
-      color: #fcfcfc;
+      color:#444;
       border-radius: 20px;
     
       padding: 10px;
@@ -50,7 +66,7 @@
       flex-direction: column;
     }
 
-    .label{
+    .lbl{
       font-size:12px;
       color: #444;
       text-transform: uppercase;
@@ -84,3 +100,34 @@
     }
 
     .hddny{display: none; }
+    .start {
+
+  position: absolute;
+  inset: 0;
+  z-index: 999;
+  background: #2d6a4f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  animation: hideStart 0.4s ease 1s forwards;
+}
+
+.l1 {
+  font-size: clamp(28px, 9vw, 44px);
+  font-weight: bold;
+}
+
+.l2 {
+  margin-top: 8px;
+  font-size: clamp(14px, 4vw, 20px);
+  letter-spacing: 6px;
+}
+
+@keyframes hideStart {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }}
